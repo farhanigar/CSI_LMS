@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component } from 'react'
 
 class TodoApp extends React.Component {
@@ -58,56 +57,10 @@ class TodoList extends React.Component {
                 {this.props.items.map(item => (
                     <li key={item.id}>{item.text}</li>
                 ))}
-=======
-import React, { Component } from 'react';
-
-//TODO:
-//https://www.robinwieruch.de/react-fetching-data/
-
-const API = 'https://hn.algolia.com/api/v1/search?query=';
-const DEFAULT_QUERY = 'redux';
-
-class App extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            hits: [],
-        };
-    }
-
-    componentDidMount() {
-        fetch(API + DEFAULT_QUERY)
-            .then(response => response.json())
-            .then(data => this.setState({ hits: data.hits }));
-    }
-
-    componentWillMount() {
-
-    }
-    componentWillUnMount() {
-
-    }
-
-    render() {
-        const { hits } = this.state;
-
-        return (
-            <ul>
-                {hits.map(hit =>
-                    <li key={hit.objectID}>
-                        <a href={hit.url}>{hit.title}</a>
-                    </li>
-                )}
->>>>>>> bed0e0c8f429c7cdda471992fca2af557ed94cc4
             </ul>
         );
     }
 }
 
-<<<<<<< HEAD
 // ReactDOM.render(<TodoApp />, mountNode);
 export default TodoApp;
-=======
-export default App;
->>>>>>> bed0e0c8f429c7cdda471992fca2af557ed94cc4

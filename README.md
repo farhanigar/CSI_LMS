@@ -62,7 +62,11 @@ add simplest redux
 ```bash
 git checkout -b step3
 //create folder src/step3
+<<<<<<< HEAD
 //create js src/step3/App.js
+=======
+//create js src/step3/App1.js
+>>>>>>> bed0e0c8f429c7cdda471992fca2af557ed94cc4
 
 npm install --save redux react-redux prop-types
 //or:
@@ -99,7 +103,20 @@ Step 6
 - copy Form, Table into `step6/` folder
 
 ```bash
+<<<<<<< HEAD
 
+=======
+git remote add stream https://github.com/jxjwilliam/react-training-assignment.git
+git checkout -b step6
+git pull stream step6
+```
+
+to fix conflicts:
+
+```bash
+git checkout stream/step6 -- package.json src/index.js
+git diff stream/step6 --name-only
+>>>>>>> bed0e0c8f429c7cdda471992fca2af557ed94cc4
 ```
 
 Step 7
